@@ -5,17 +5,16 @@ import "../index.css";
 function Dashboard() {
 
   const [notes, setNotes] = useState([]);
+  
   const [showProfile, setShowProfile] = useState(false);
 
   const username = localStorage.getItem("username");
   const token = localStorage.getItem("token");
 
   const firstLetter = username ? username.charAt(0).toUpperCase() : "U";
-
-  useEffect(() => {
-    fetchNotes();
-  }, []);
-
+useEffect(() => {
+  fetchNotes();
+}, [fetchNotes]);
   const fetchNotes = async () => {
     try {
 
