@@ -1,0 +1,317 @@
+/* =========================
+   Reset and Global Styles
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+/* =========================
+   Top Bar (for all pages)
+   ========================= */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #4a90e2;
+  color: white;
+}
+
+.top-bar h1 {
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-bar .buttons button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: white;
+  color: #4a90e2;
+  transition: 0.3s;
+}
+
+.top-bar .buttons button:hover {
+  background-color: #357ab7;
+  color: white;
+}
+
+.top-bar .buttons button.create {
+  background-color: #f5a623;
+  color: white;
+}
+
+.top-bar .buttons button.create:hover {
+  background-color: #d48806;
+}
+
+.top-bar .buttons button.logout {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.top-bar .buttons button.logout:hover {
+  background-color: #c0392b;
+}
+
+/* =========================
+   Centered Pages (Login/Signup/Create Note)
+   ========================= */
+.page-container,
+.form-container,
+.right-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f0f4f8;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+form h2 {
+  color: #4a90e2;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+form input, 
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4a90e2;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-color: #357ab7;
+}
+
+form p.message {
+  color: red;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+form p a {
+  color: #4a90e2;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* =========================
+   Dashboard Notes Container
+   ========================= */
+.notes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 50px;
+}
+
+.note-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  padding: 15px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.note-card h3 {
+  color: #4a90e2;
+  margin-bottom: 10px;
+}
+
+.note-card button {
+  margin-top: 10px;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.note-card button.edit {
+  background-color: #f5a623;
+  color: white;
+  margin-right: 5px;
+}
+
+.note-card button.edit:hover {
+  background-color: #d48806;
+}
+
+.note-card button.delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.note-card button.delete:hover {
+  background-color: #c0392b;
+}
+
+/* =========================
+   Split Layout (Login/Signup optional)
+   ========================= */
+.page-container.split {
+  display: flex;
+  min-height: 100vh;
+}
+
+.left-section {
+  flex: 1;
+  background: linear-gradient(135deg, #4a90e2, #357ab7);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.left-section h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.left-section p {
+  font-size: 20px;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  padding: 50px;
+}
+
+.right-section form {
+  width: 100%;
+  max-width: 400px;
+}
+/* right side buttons */
+.buttons{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+/* create note button */
+.create{
+  padding:8px 14px;
+  border:none;
+  border-radius:6px;
+  background:#f5a623;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.create:hover{
+  background:#d48806;
+}
+/* Profile container */
+.profile-container{
+  position:relative;
+  margin-left:15px;
+}
+
+/* Avatar */
+.avatar{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:white;
+  color:#4a90e2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+  cursor:pointer;
+  font-size:18px;
+}
+
+/* Large avatar */
+.avatar.large{
+  width:60px;
+  height:60px;
+  font-size:24px;
+  margin:auto;
+}
+
+/* Dropdown */
+.profile-dropdown{
+  position:absolute;
+  top:55px;
+  right:0;
+  width:200px;
+  background:white;
+  border-radius:10px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  padding:15px;
+  text-align:center;
+}
+
+/* Username */
+.username{
+  margin-top:10px;
+  font-weight:600;
+  font-size:16px;
+  color:#333;
+}
+
+/* Logout button */
+.logout-btn{
+  margin-top:10px;
+  width:100%;
+  padding:8px;
+  border:none;
+  border-radius:6px;
+  background:#e74c3c;
+  color:white;
+  cursor:pointer;
+}
+
+.logout-btn:hover{
+  background:#c0392b;
+}
