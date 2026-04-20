@@ -8,7 +8,9 @@ const EditNote = () => {
   const [content, setContent] = useState("");
   const navigate = useNavigate();
 
-  useEffect(() => { fetchNote(); }, []);
+  useEffect(() => {
+  fetchNote();
+}, [fetchNote]);
 
   const fetchNote = async () => {
     const res = await getNoteById(id);
